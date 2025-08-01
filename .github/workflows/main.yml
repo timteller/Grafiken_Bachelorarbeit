@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y xmlstarlet xvfb libgtk-3-0 libxss1 libasound2
+          sudo apt-get install -y xmlstarlet xvfb libgtk-3-0 libxss1 libasound2t64
 
       - name: Download and extract Draw.io AppImage
         run: |
