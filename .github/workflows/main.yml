@@ -18,14 +18,13 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: Install dependencies
+      - name: Install dependencies via apt
         run: |
           sudo apt-get update
-          sudo apt-get install -y xmlstarlet wget
-          wget https://github.com/jgraph/drawio-desktop/releases/latest/download/draw.io-x86_64-20.8.16.AppImage -O drawio
-          chmod +x drawio
+          sudo apt-get install -y xmlstarlet snapd
+          sudo snap install drawio
 
-      - name: Export PDFs
+      - name: Export PDFs from layers
         run: |
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
@@ -35,7 +34,7 @@ jobs:
           mapfile -t LAYERS < <(xmlstarlet sel -t -m "//mxCell[@style='layer']" -v "@value" -n "$FILE")
 
           for LAYER in "${LAYERS[@]}"; do
-            ./drawio \
+            snap run drawio \
               --export "$FILE" \
               --output "$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
