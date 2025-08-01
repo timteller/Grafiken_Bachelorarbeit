@@ -24,7 +24,8 @@ jobs:
     - name: Count Pages in Draw.io File
       id: count
       run: |
-        page_count=$(xmllint --xpath "count(//diagram)" docs/drawio/deathstar-blueprint.drawio)
+        FILE=$(find . -name '*.drawio' | head -n 1)
+        page_count=$(xmllint --xpath "count(//diagram)" "$FILE")
         echo "count=$page_count" >> $GITHUB_OUTPUT
 
     - name: Export PNG Images from Draw.io
