@@ -48,7 +48,18 @@ jobs:
         mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
         echo "Found layers: ${LAYERS[*]}"
         sleep 3
-        ./squashfs-root/drawio --no-sandbox -x -f png --page-index 0 -o "$OUT_DIR/page0.png" "$FILE"
+        for LAYER in "${LAYERS[@]}"; do
+            echo "Exporting layer: $LAYER"
+            ./squashfs-root/drawio \
+              --no-sandbox \
+              --disable-gpu \
+              --export "$FILE" \
+              --output "$OUT_DIR/${LAYER}.pdf" \
+              --format pdf \
+              --page-index "$PAGE_INDEX" \
+              --layers "$LAYER" \
+              --crop
+        done
         
 
     - name: Check generated PDFs
