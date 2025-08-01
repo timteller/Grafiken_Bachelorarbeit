@@ -21,17 +21,8 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y xmlstarlet
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install drawio-batch
-        run: npm install -g drawio-batch
-
-      - name: Export PDFs from layers
+      - name: Export PDFs using Docker
         run: |
-          set -e
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
           PAGE_INDEX=0
@@ -44,9 +35,9 @@ jobs:
 
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            drawio-batch \
-              --input "$FILE" \
-              --output "$OUT_DIR/${LAYER}.pdf" \
+            docker run --rm -v "$PWD:/data" jgraph/drawio \
+              --export "/data/$FILE" \
+              --output "/data/$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
               --page-index "$PAGE_INDEX" \
               --layers "$LAYER" \
