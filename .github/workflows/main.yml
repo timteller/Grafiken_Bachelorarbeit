@@ -25,7 +25,7 @@ jobs:
       - name: Export drawio → PDF
         uses: rlespinasse/drawio-export-action@v2
         with:
-          path: 'output_layers/*'
+          path: 'output_layers'
           format: pdf
           output: 'export/pdf'
           remove-page-suffix: false
