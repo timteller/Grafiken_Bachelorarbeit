@@ -51,7 +51,7 @@ jobs:
       
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            ./drawio \
+            squashfs-root/drawio \
               --no-sandbox \
               --disable-gpu \
               --export "$FILE" \
@@ -61,6 +61,7 @@ jobs:
               --layers "$LAYER" \
               --crop
           done
+
 
       - name: Check generated PDFs
         run: ls -l diagrams/
