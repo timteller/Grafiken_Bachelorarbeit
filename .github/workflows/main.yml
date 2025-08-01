@@ -40,8 +40,19 @@ jobs:
         echo "Using file: $FILE"
         for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            ./squashfs-root/drawio -x -f pdf --page-index "$PAGE_INDEX" -o "$OUT_DIR/${LAYER}.pdf" "$FILE"
+            ./squashfs-root/drawio \
+              --no-sandbox \
+              --disable-gpu \
+              --export "$FILE" \
+              --output "$OUT_DIR/${LAYER}.pdf" \
+              --format pdf \
+              --page-index "$PAGE_INDEX" \
+              --layers "$LAYER" \
+              --crop
         done
+
+    - name: Check generated PDFs
+      run: ls -l diagrams/
 
     - name: Commit and Push Exported Images
       env:
