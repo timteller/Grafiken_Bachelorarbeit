@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20' # Verwende eine neuere LTS-Version
+          node-version: '20'
 
       - name: Install dependencies
         run: |
@@ -36,8 +36,8 @@ jobs:
         run: |
           set -e
           
-          # Add the global npm bin directory to the PATH
-          export PATH="$(npm root -g)/.bin:$PATH"
+          # Use the full path to the drawio executable
+          DRAWIO_BIN=$(npm root -g)/.bin/drawio
           
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
@@ -55,7 +55,7 @@ jobs:
           
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            drawio \
+            "$DRAWIO_BIN" \
               --no-sandbox \
               --disable-gpu \
               --export "$FILE" \
