@@ -46,6 +46,7 @@ jobs:
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
             ./drawio \
+              --no-sandbox \
               --export "$FILE" \
               --output "$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
