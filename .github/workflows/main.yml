@@ -20,7 +20,7 @@ jobs:
       - name: Run Python script to split Draw.io layers
         run: |
           FILE=$(find . -name '*.drawio' | head -n 1)
-          python split.py "$FILE" output_layers
+          python split.py --input_file "$FILE" --output_dir testdir
       
       - name: Export drawio → PDF
         uses: rlespinasse/drawio-export-action@v2
