@@ -35,7 +35,7 @@ jobs:
 
           echo "Using file: $FILE"
 
-          mapfile -t LAYERS < <(xmlstarlet sel -t -m "//mxCell[@style='layer']" -v "@value" -n "$FILE")
+          mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
           echo "Found layers: ${LAYERS[*]}"
 
           for LAYER in "${LAYERS[@]}"; do
