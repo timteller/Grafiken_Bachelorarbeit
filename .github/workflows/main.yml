@@ -36,8 +36,14 @@ jobs:
         run: |
           set -e
           
-          # Use the full path to the drawio executable
-          DRAWIO_BIN=$(npm root -g)/.bin/drawio
+          # Use `which` to find the correct path of the globally installed drawio command
+          DRAWIO_BIN=$(which drawio)
+          
+          # Check if the command was found
+          if [ -z "$DRAWIO_BIN" ]; then
+            echo "Error: drawio command not found. Please check npm installation."
+            exit 1
+          fi
           
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
