@@ -19,10 +19,20 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y xmlstarlet
-
-      - name: Export PDFs using Docker
         run: |
+          sudo apt-get update
+          sudo apt-get install -y xmlstarlet xvfb libgtk-3-0 libxss1 libasound2
+
+      - name: Download and extract Draw.io AppImage
+        run: |
+          wget https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/drawio-x86_64-28.0.6.AppImage -O drawio.AppImage
+          chmod +x drawio.AppImage
+          ./drawio.AppImage --appimage-extract
+          ln -s squashfs-root/drawio drawio
+
+      - name: Export PDFs from layers
+        run: |
+          set -e
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
           PAGE_INDEX=0
@@ -33,11 +43,16 @@ jobs:
           mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
           echo "Found layers: ${LAYERS[*]}"
 
+          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+          export DISPLAY=:99
+
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            docker run --rm -v "$PWD:/data" jgraph/drawio \
-              --export "/data/$FILE" \
-              --output "/data/$OUT_DIR/${LAYER}.pdf" \
+            ./drawio \
+              --no-sandbox \
+              --disable-gpu \
+              --export "$FILE" \
+              --output "$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
               --page-index "$PAGE_INDEX" \
               --layers "$LAYER" \
