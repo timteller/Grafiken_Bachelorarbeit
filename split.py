@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import os
 import re
+import argparse
 
 def sanitize_filename(name):
     """Sanitize a string to be safe for use as a filename."""
@@ -74,6 +75,9 @@ def export_layers(input_file, output_dir):
         print(f"Exported layer '{layer_label}' to '{output_path}'")
 
 if __name__ == '__main__':
-    input_file = 'Produktionsprozess.drawio'  # Replace with your input file path
-    output_dir = 'output_layers'  # Directory to save output files
-    export_layers(input_file, output_dir)
+    parser = argparse.ArgumentParser(description='Export layers from a drawio file.')
+    parser.add_argument('--input_file', required=True, help='Path to the input .drawio file')
+    parser.add_argument('--output_dir', required=True, help='Directory to save output files')
+    args = parser.parse_args()
+
+    export_layers(args.input_file, args.output_dir)
