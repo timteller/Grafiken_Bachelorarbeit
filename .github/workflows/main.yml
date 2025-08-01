@@ -1,77 +1,28 @@
-name: Export Draw.io Diagrams
-
+name: Export Draw.io → PDF
 on:
   push:
     paths:
-      - '*.drawio'
-
+      - '**/*.drawio'
 jobs:
-  export-drawio:
+  export:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-
-     # Install and start D-Bus
-    - name: Install and start D-Bus
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y dbus
-        sudo mkdir -p /var/run/dbus
-        sudo dbus-daemon --config-file=/usr/share/dbus-1/system.conf --fork --print-address
-
-    - name: Install Dependencies and Draw.io
-      run: |
-        sudo apt-get update && sudo apt-get install -y xvfb libxml2-utils xmlstarlet
-        wget https://github.com/jgraph/drawio-desktop/releases/download/v26.2.2/drawio-x86_64-26.2.2.AppImage -O drawio
-        chmod +x drawio
-        ./drawio --appimage-extract
-        mkdir -p docs/images/
-
-    - name: Count Pages in Draw.io File
-      id: count
-      run: |
-        FILE=$(find . -name '*.drawio' | head -n 1)
-        page_count=$(xmllint --xpath "count(//diagram)" "$FILE")
-        echo "count=$page_count" >> $GITHUB_OUTPUT
-
-    - name: Export PNG Images from Draw.io
-      run: |
-        FILE=$(find . -name '*.drawio' | head -n 1)
-        OUT_DIR=diagrams
-        PAGE_INDEX=0
-        mkdir -p "$OUT_DIR"
-        Xvfb :99 -screen 0 1024x768x24 &
-        export DISPLAY=:99
-        echo "Using file: $FILE"
-        mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
-        echo "Found layers: ${LAYERS[*]}"
-        sleep 3
-        for LAYER in "${LAYERS[@]}"; do
-            echo "Exporting layer: $LAYER"
-            ./squashfs-root/drawio \
-              --no-sandbox \
-              --disable-gpu \
-              --output "$OUT_DIR/${LAYER}.pdf" \
-              --format pdf \
-              --page-index "$PAGE_INDEX" \
-              --layers "$LAYER" \
-              --crop \
-              --export \
-              "$FILE"
-        done
-        
-
-    - name: Check generated PDFs
-      run: ls -l diagrams/
-
-    - name: Commit and Push Exported Images
-      env:
-        GITHUB_TOKEN: $
-      run: |
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git add docs/images/
-        git commit -m "Exported Draw.io diagrams [skip ci]" || echo "No changes to commit"
-        git push
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Export drawio → PDF
+        uses: rlespinasse/drawio-export-action@v2
+        with:
+          path: '.'
+          format: pdf
+          output: 'export/pdf'
+          remove-page-suffix: false
+          crop: true
+          embed-diagram: true
+      - name: Commit cambios
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'chore: PDF‑Export synchronisiert'
+          commit_user_name: github-actions
+          commit_user_email: github-actions@github.com
