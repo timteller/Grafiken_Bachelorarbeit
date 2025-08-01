@@ -1,4 +1,6 @@
-name: Export Draw.io Layers to PDFs and Commit
+	
+
+name: Export Draw.io Diagrams
 
 on:
   push:
@@ -6,73 +8,44 @@ on:
       - '*.drawio'
 
 jobs:
-  export-and-commit:
+  export-drawio:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: true
-          fetch-depth: 0
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+    - name: Install Dependencies and Draw.io
+      run: |
+        sudo apt-get update && sudo apt-get install -y xvfb libxml2-utils
+        wget https://github.com/jgraph/drawio-desktop/releases/download/v26.2.2/drawio-x86_64-26.2.2.AppImage -O drawio
+        chmod +x drawio
+        ./drawio --appimage-extract
+        mkdir -p docs/images/
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xmlstarlet xvfb libgtk-3-0 libxss1 libasound2t64
+    - name: Count Pages in Draw.io File
+      id: count
+      run: |
+        page_count=$(xmllint --xpath "count(//diagram)" docs/drawio/deathstar-blueprint.drawio)
+        echo "count=$page_count" >> $GITHUB_OUTPUT
 
-      - name: Install draw.io headless exporter
-        run: |
-          npm install -g draw.io-desktop@latest
+    - name: Export PNG Images from Draw.io
+      run: |
+        FILE=$(find . -name '*.drawio' | head -n 1)
+        Xvfb :99 -screen 0 1024x768x24 &
+        export DISPLAY=:99
+        sleep 3
+        echo "Using file: $FILE"
+        for i in $(seq 0 $(( $ - 1 ))); do
+          ./squashfs-root/drawio -x -f png --page-index $i -o diagrams/deathstar-blueprint-page-$i.png "$FILE"
+        done
 
-      - name: Export PDFs from layers
-        run: |
-          set -e
-          
-          # Add the global npm bin directory to the PATH for this shell session
-          export PATH="$(npm root -g)/.bin:$PATH"
-          
-          FILE=$(find . -name '*.drawio' | head -n 1)
-          OUT_DIR=diagrams
-          PAGE_INDEX=0
-          mkdir -p "$OUT_DIR"
-          
-          echo "Using file: $FILE"
-          test -f "$FILE" || (echo "File not found: $FILE" && exit 1)
-          
-          mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
-          echo "Found layers: ${LAYERS[*]}"
-          
-          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-          export DISPLAY=:99
-          
-          for LAYER in "${LAYERS[@]}"; do
-            echo "Exporting layer: $LAYER"
-            drawio \
-              --no-sandbox \
-              --disable-gpu \
-              --export "$FILE" \
-              --output "$OUT_DIR/${LAYER}.pdf" \
-              --format pdf \
-              --page-index "$PAGE_INDEX" \
-              --layers "$LAYER" \
-              --crop
-          done
-
-      - name: Check generated PDFs
-        run: ls -l diagrams/
-
-      - name: Commit and push PDFs
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add diagrams/
-          git commit -m "Update PDFs from Draw.io layers" || echo "No changes"
-          git push
+    - name: Commit and Push Exported Images
+      env:
+        GITHUB_TOKEN: $
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add docs/images/
+        git commit -m "Exported Draw.io diagrams [skip ci]" || echo "No changes to commit"
+        git push
