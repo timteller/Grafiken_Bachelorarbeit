@@ -33,7 +33,7 @@ jobs:
       - name: Export PDFs from layers
         run: |
           set -e
-          FILE=$(readlink -f "$(find . -name '*.drawio' | head -n 1)")
+          FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
           PAGE_INDEX=0
           mkdir -p "$OUT_DIR"
