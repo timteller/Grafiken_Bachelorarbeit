@@ -33,28 +33,32 @@ jobs:
       - name: Export PDFs from layers
         run: |
           set -e
-          cd "$GITHUB_WORKSPACE"
-      
+          
+          # We don't need to change directory anymore, we'll use absolute paths
+          
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
           PAGE_INDEX=0
           mkdir -p "$OUT_DIR"
-      
+          
           echo "Using file: $FILE"
           test -f "$FILE" || (echo "File not found: $FILE" && exit 1)
-      
+          
           mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
           echo "Found layers: ${LAYERS[*]}"
-      
+          
           Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
           export DISPLAY=:99
-      
+          
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            squashfs-root/drawio \
+            
+            # Use the absolute path to the drawio app and the relative path for the files.
+            # We are executing this from the workspace directory.
+            "$GITHUB_WORKSPACE/squashfs-root/drawio" \
               --no-sandbox \
               --disable-gpu \
-              --export "$GITHUB_WORKSPACE/$FILE" \
+              --export "$FILE" \
               --output "$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
               --page-index "$PAGE_INDEX" \
