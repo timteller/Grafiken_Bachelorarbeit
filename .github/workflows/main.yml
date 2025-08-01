@@ -36,7 +36,7 @@ jobs:
         run: |
           set -e
           
-          # Add npm global bin to PATH
+          # Add the global npm bin directory to the PATH
           export PATH="$(npm root -g)/.bin:$PATH"
           
           FILE=$(find . -name '*.drawio' | head -n 1)
