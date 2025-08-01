@@ -22,8 +22,13 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y xmlstarlet
-          wget https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/drawio-x86_64-28.0.6.AppImage -O drawio
-          chmod +x drawio
+          
+      - name: Install draw.io without FUSE
+        run: |
+          wget https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/drawio-x86_64-28.0.6.AppImage -O drawio.AppImage
+          chmod +x drawio.AppImage
+          ./drawio.AppImage --appimage-extract
+          ln -s squashfs-root/drawio drawio
 
       - name: Export PDFs from layers
         run: |
