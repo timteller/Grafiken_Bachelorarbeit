@@ -18,22 +18,23 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # oder eine andere LTS-Version
+
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y xmlstarlet xvfb libgtk-3-0 libxss1 libasound2t64
 
-      - name: Download and extract Draw.io AppImage
+      - name: Install draw.io headless exporter
         run: |
-          wget https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/drawio-x86_64-28.0.6.AppImage -O drawio.AppImage
-          chmod +x drawio.AppImage
-          ./drawio.AppImage --appimage-extract
-          ln -s squashfs-root/drawio drawio
+          npm install -g draw.io-desktop@28.0.6
 
       - name: Export PDFs from layers
         run: |
           set -e
-          cd "$GITHUB_WORKSPACE"
           
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
@@ -51,9 +52,7 @@ jobs:
           
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            # We use the absolute path to the drawio app and run it from the GITHUB_WORKSPACE directory.
-            # This ensures that the relative path to the drawio file is always correct.
-            "$GITHUB_WORKSPACE/squashfs-root/drawio" \
+            drawio \
               --no-sandbox \
               --disable-gpu \
               --export "$FILE" \
@@ -63,7 +62,6 @@ jobs:
               --layers "$LAYER" \
               --crop
           done
-
 
       - name: Check generated PDFs
         run: ls -l diagrams/
