@@ -31,12 +31,16 @@ jobs:
     - name: Export PNG Images from Draw.io
       run: |
         FILE=$(find . -name '*.drawio' | head -n 1)
+        OUT_DIR=diagrams
+        PAGE_INDEX=0
+        mkdir -p "$OUT_DIR"
         Xvfb :99 -screen 0 1024x768x24 &
         export DISPLAY=:99
         sleep 3
         echo "Using file: $FILE"
-        for i in $(seq 0 $(( $ - 1 ))); do
-          ./squashfs-root/drawio -x -f png --page-index $i -o diagrams/deathstar-blueprint-page-$i.png "$FILE"
+        for LAYER in "${LAYERS[@]}"; do
+            echo "Exporting layer: $LAYER"
+            ./squashfs-root/drawio -x -f pdf --page-index "$PAGE_INDEX" -o "$OUT_DIR/${LAYER}.pdf" "$FILE"
         done
 
     - name: Commit and Push Exported Images
