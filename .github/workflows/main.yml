@@ -37,30 +37,30 @@ jobs:
         echo "count=$page_count" >> $GITHUB_OUTPUT
 
     - name: Export PNG Images from Draw.io
-  run: |
-    FILE=$(find . -name '*.drawio' | head -n 1)
-    OUT_DIR=diagrams
-    PAGE_INDEX=0
-    mkdir -p "$OUT_DIR"
-    Xvfb :99 -screen 0 1024x768x24 &
-    export DISPLAY=:99
-    echo "Using file: $FILE"
-    mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
-    echo "Found layers: ${LAYERS[*]}"
-    sleep 3
-    for LAYER in "${LAYERS[@]}"; do
-        echo "Exporting layer: $LAYER"
-        ./squashfs-root/drawio \
-          --no-sandbox \
-          --disable-gpu \
-          --output "$OUT_DIR/${LAYER}.pdf" \
-          --format pdf \
-          --page-index "$PAGE_INDEX" \
-          --layers "$LAYER" \
-          --crop \
-          --export \
-          "$FILE"
-    done
+      run: |
+        FILE=$(find . -name '*.drawio' | head -n 1)
+        OUT_DIR=diagrams
+        PAGE_INDEX=0
+        mkdir -p "$OUT_DIR"
+        Xvfb :99 -screen 0 1024x768x24 &
+        export DISPLAY=:99
+        echo "Using file: $FILE"
+        mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
+        echo "Found layers: ${LAYERS[*]}"
+        sleep 3
+        for LAYER in "${LAYERS[@]}"; do
+            echo "Exporting layer: $LAYER"
+            ./squashfs-root/drawio \
+              --no-sandbox \
+              --disable-gpu \
+              --output "$OUT_DIR/${LAYER}.pdf" \
+              --format pdf \
+              --page-index "$PAGE_INDEX" \
+              --layers "$LAYER" \
+              --crop \
+              --export \
+              "$FILE"
+        done
         
 
     - name: Check generated PDFs
