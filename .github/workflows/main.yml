@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # oder eine andere LTS-Version
+          node-version: '16'
 
       - name: Install dependencies
         run: |
@@ -30,7 +30,7 @@ jobs:
 
       - name: Install draw.io headless exporter
         run: |
-          npm install -g draw.io-desktop@28.0.6
+          npm install -g draw.io-desktop@latest
 
       - name: Export PDFs from layers
         run: |
