@@ -33,8 +33,7 @@ jobs:
       - name: Export PDFs from layers
         run: |
           set -e
-          
-          # We don't need to change directory anymore, we'll use absolute paths
+          cd "$GITHUB_WORKSPACE"
           
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
@@ -52,9 +51,8 @@ jobs:
           
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            
-            # Use the absolute path to the drawio app and the relative path for the files.
-            # We are executing this from the workspace directory.
+            # We use the absolute path to the drawio app and run it from the GITHUB_WORKSPACE directory.
+            # This ensures that the relative path to the drawio file is always correct.
             "$GITHUB_WORKSPACE/squashfs-root/drawio" \
               --no-sandbox \
               --disable-gpu \
