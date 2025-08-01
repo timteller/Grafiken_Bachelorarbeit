@@ -18,23 +18,29 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: Install dependencies via apt
+      - name: Install dependencies (AppImage)
         run: |
           sudo apt-get update
-          sudo apt-get install -y xmlstarlet snapd
-          sudo snap install drawio
+          sudo apt-get install -y xmlstarlet
+          wget https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/drawio-x86_64-28.0.6.AppImage -O drawio
+          chmod +x drawio
 
       - name: Export PDFs from layers
         run: |
+          set -e
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
           PAGE_INDEX=0
           mkdir -p "$OUT_DIR"
-          
+
+          echo "Using file: $FILE"
+
           mapfile -t LAYERS < <(xmlstarlet sel -t -m "//mxCell[@style='layer']" -v "@value" -n "$FILE")
+          echo "Found layers: ${LAYERS[*]}"
 
           for LAYER in "${LAYERS[@]}"; do
-            snap run drawio \
+            echo "Exporting layer: $LAYER"
+            ./drawio \
               --export "$FILE" \
               --output "$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
