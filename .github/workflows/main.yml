@@ -36,14 +36,8 @@ jobs:
         run: |
           set -e
           
-          # Use `which` to find the correct path of the globally installed drawio command
-          DRAWIO_BIN=$(which drawio)
-          
-          # Check if the command was found
-          if [ -z "$DRAWIO_BIN" ]; then
-            echo "Error: drawio command not found. Please check npm installation."
-            exit 1
-          fi
+          # Add the global npm bin directory to the PATH for this shell session
+          export PATH="$(npm root -g)/.bin:$PATH"
           
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
@@ -61,7 +55,7 @@ jobs:
           
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            "$DRAWIO_BIN" \
+            drawio \
               --no-sandbox \
               --disable-gpu \
               --export "$FILE" \
