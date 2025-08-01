@@ -1,0 +1,53 @@
+name: Export Draw.io Layers to PDFs and Commit
+
+on:
+  push:
+    paths:
+      - '*.drawio'
+
+jobs:
+  export-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xmlstarlet wget
+          wget https://github.com/jgraph/drawio-desktop/releases/latest/download/draw.io-x86_64-20.8.16.AppImage -O drawio
+          chmod +x drawio
+
+      - name: Export PDFs
+        run: |
+          FILE=$(find . -name '*.drawio' | head -n 1)
+          OUT_DIR=diagrams
+          PAGE_INDEX=0
+          mkdir -p "$OUT_DIR"
+          
+          mapfile -t LAYERS < <(xmlstarlet sel -t -m "//mxCell[@style='layer']" -v "@value" -n "$FILE")
+
+          for LAYER in "${LAYERS[@]}"; do
+            ./drawio \
+              --export "$FILE" \
+              --output "$OUT_DIR/${LAYER}.pdf" \
+              --format pdf \
+              --page-index "$PAGE_INDEX" \
+              --layers "$LAYER" \
+              --crop
+          done
+
+      - name: Commit and push PDFs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add diagrams/
+          git commit -m "Update PDFs from Draw.io layers" || echo "No changes"
+          git push
