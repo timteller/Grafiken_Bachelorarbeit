@@ -36,6 +36,9 @@ jobs:
         run: |
           set -e
           
+          # Add npm global bin to PATH
+          export PATH="$(npm root -g)/.bin:$PATH"
+          
           FILE=$(find . -name '*.drawio' | head -n 1)
           OUT_DIR=diagrams
           PAGE_INDEX=0
