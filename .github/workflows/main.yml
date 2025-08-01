@@ -54,7 +54,7 @@ jobs:
             squashfs-root/drawio \
               --no-sandbox \
               --disable-gpu \
-              --export "$FILE" \
+              --export "$GITHUB_WORKSPACE/$FILE" \
               --output "$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
               --page-index "$PAGE_INDEX" \
