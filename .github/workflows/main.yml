@@ -33,25 +33,17 @@ jobs:
       - name: Export PDFs from layers
         run: |
           set -e
+          cd "$GITHUB_WORKSPACE"
           
-          # We define the drawio application path first
-          DRAWIO_APP="$GITHUB_WORKSPACE/squashfs-root/drawio"
-          
-          # Change directory to the drawio app's location to satisfy its sandbox
-          cd "$GITHUB_WORKSPACE/squashfs-root"
-          
-          FILE_PATH="$GITHUB_WORKSPACE/$(find . -name '*.drawio' | head -n 1)"
-          OUT_DIR="$GITHUB_WORKSPACE/diagrams"
+          FILE=$(find . -name '*.drawio' | head -n 1)
+          OUT_DIR=diagrams
           PAGE_INDEX=0
-          
-          # Create output directory in the main workspace
           mkdir -p "$OUT_DIR"
           
-          echo "Using file: $FILE_PATH"
-          test -f "$FILE_PATH" || (echo "File not found: $FILE_PATH" && exit 1)
+          echo "Using file: $FILE"
+          test -f "$FILE" || (echo "File not found: $FILE" && exit 1)
           
-          # xmlstarlet needs the full path to the file
-          mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE_PATH")
+          mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
           echo "Found layers: ${LAYERS[*]}"
           
           Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
@@ -59,11 +51,12 @@ jobs:
           
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            # Now call the app from its directory, using absolute paths for files
-            "$DRAWIO_APP" \
+            # We use the absolute path to the drawio app and run it from the GITHUB_WORKSPACE directory.
+            # This ensures that the relative path to the drawio file is always correct.
+            "$GITHUB_WORKSPACE/squashfs-root/drawio" \
               --no-sandbox \
               --disable-gpu \
-              --export "$FILE_PATH" \
+              --export "$FILE" \
               --output "$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
               --page-index "$PAGE_INDEX" \
