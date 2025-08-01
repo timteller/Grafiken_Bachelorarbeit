@@ -18,24 +18,17 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: Install dependencies (AppImage)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xmlstarlet
-          sudo apt-get install -y xvfb
-          
-      - name: Install draw.io without FUSE
-        run: |
-          wget https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/drawio-x86_64-28.0.6.AppImage -O drawio.AppImage
-          chmod +x drawio.AppImage
-          ./drawio.AppImage --appimage-extract
-          ln -s squashfs-root/drawio drawio
-          
-      - name: Start Xvfb
-        run: |
-          export DISPLAY=:99
-          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-          
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y xmlstarlet
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install drawio-batch
+        run: npm install -g drawio-batch
+
       - name: Export PDFs from layers
         run: |
           set -e
@@ -51,9 +44,8 @@ jobs:
 
           for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
-            DISPLAY=:99  ./drawio \
-              --no-sandbox \
-              --export "$FILE" \
+            drawio-batch \
+              --input "$FILE" \
               --output "$OUT_DIR/${LAYER}.pdf" \
               --format pdf \
               --page-index "$PAGE_INDEX" \
@@ -71,6 +63,3 @@ jobs:
           git add diagrams/
           git commit -m "Update PDFs from Draw.io layers" || echo "No changes"
           git push
-
-
-
