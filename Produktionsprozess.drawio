@@ -3,7 +3,9 @@
     <mxGraphModel dx="654" dy="275" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
-        <mxCell id="kjXNbdknxgFZG0ey-R28-2" value="Produktionsprozess" parent="0" />
+        <object label="Produktionsprozess" style="layer" id="kjXNbdknxgFZG0ey-R28-2">
+          <mxCell parent="0" />
+        </object>
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="kjXNbdknxgFZG0ey-R28-2" source="9w9Xh2U-Y_duheg7cGsQ-1" target="9w9Xh2U-Y_duheg7cGsQ-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -46,7 +48,9 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-12" value="Rohmaterial" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=-90;" parent="kjXNbdknxgFZG0ey-R28-2" vertex="1">
           <mxGeometry x="120" y="135" width="70" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-3" value="Produktionsprozess_with_loops" parent="0" />
+        <object label="Produktionsprozess_with_loops" style="layer" id="kjXNbdknxgFZG0ey-R28-3">
+          <mxCell parent="0" />
+        </object>
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="kjXNbdknxgFZG0ey-R28-3" source="9w9Xh2U-Y_duheg7cGsQ-32" target="9w9Xh2U-Y_duheg7cGsQ-34" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -120,7 +124,9 @@
             <mxPoint x="-1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-4" value="Produktionsprozess_with_transitions" parent="0" />
+        <object label="Produktionsprozess_with_transitions" style="layer" id="kjXNbdknxgFZG0ey-R28-4">
+          <mxCell parent="0" />
+        </object>
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="kjXNbdknxgFZG0ey-R28-4" source="9w9Xh2U-Y_duheg7cGsQ-14" target="9w9Xh2U-Y_duheg7cGsQ-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -217,7 +223,9 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-105" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-4" vertex="1">
           <mxGeometry x="430" y="465" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-5" value="Produktionsprozess_with_storage" parent="0" />
+        <object label="Produktionsprozess_with_storage" style="layer" id="kjXNbdknxgFZG0ey-R28-5">
+          <mxCell parent="0" />
+        </object>
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="kjXNbdknxgFZG0ey-R28-5" source="9w9Xh2U-Y_duheg7cGsQ-49" target="9w9Xh2U-Y_duheg7cGsQ-59" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -304,7 +312,7 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-59" value="Speichersystem" style="rounded=1;whiteSpace=wrap;html=1;" parent="kjXNbdknxgFZG0ey-R28-5" vertex="1">
           <mxGeometry x="200" y="640" width="440" height="40" as="geometry" />
         </mxCell>
-        <object label="Produktionsprozess_with_storage_and_transitions" type="layer" id="kjXNbdknxgFZG0ey-R28-6">
+        <object label="Produktionsprozess_with_storage_and_transitions" style="layer" id="kjXNbdknxgFZG0ey-R28-6">
           <mxCell parent="0" />
         </object>
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="kjXNbdknxgFZG0ey-R28-6" source="9w9Xh2U-Y_duheg7cGsQ-68" target="9w9Xh2U-Y_duheg7cGsQ-81" edge="1">
