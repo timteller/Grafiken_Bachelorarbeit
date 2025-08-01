@@ -13,6 +13,14 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
+     # Install and start D-Bus
+    - name: Install and start D-Bus
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y dbus
+        sudo mkdir -p /var/run/dbus
+        sudo dbus-daemon --config-file=/usr/share/dbus-1/system.conf --fork --print-address
+
     - name: Install Dependencies and Draw.io
       run: |
         sudo apt-get update && sudo apt-get install -y xvfb libxml2-utils xmlstarlet
