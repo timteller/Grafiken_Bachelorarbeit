@@ -15,7 +15,7 @@ jobs:
 
     - name: Install Dependencies and Draw.io
       run: |
-        sudo apt-get update && sudo apt-get install -y xvfb libxml2-utils
+        sudo apt-get update && sudo apt-get install -y xvfb libxml2-utils xmlstarlet
         wget https://github.com/jgraph/drawio-desktop/releases/download/v26.2.2/drawio-x86_64-26.2.2.AppImage -O drawio
         chmod +x drawio
         ./drawio --appimage-extract
