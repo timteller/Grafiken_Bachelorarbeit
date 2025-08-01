@@ -36,8 +36,10 @@ jobs:
         mkdir -p "$OUT_DIR"
         Xvfb :99 -screen 0 1024x768x24 &
         export DISPLAY=:99
-        sleep 3
         echo "Using file: $FILE"
+        mapfile -t LAYERS < <(xmlstarlet sel -t -m "//object[@style='layer']" -v "@label" -n "$FILE")
+        echo "Found layers: ${LAYERS[*]}"
+        sleep 3
         for LAYER in "${LAYERS[@]}"; do
             echo "Exporting layer: $LAYER"
             ./squashfs-root/drawio \
