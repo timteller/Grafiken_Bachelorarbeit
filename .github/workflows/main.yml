@@ -11,10 +11,21 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run Python script to split Draw.io layers
+        run: |
+          FILE=$(find . -name '*.drawio' | head -n 1)
+          python split.py "$FILE" output_layers
+      
       - name: Export drawio → PDF
         uses: rlespinasse/drawio-export-action@v2
         with:
-          path: '.'
+          path: 'output_layers/*'
           format: pdf
           output: 'export/pdf'
           remove-page-suffix: false
