@@ -458,9 +458,6 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-105" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="430" y="430" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-1" value="Ingest" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="940" width="80" height="40" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
