@@ -20,8 +20,9 @@ jobs:
       - name: Run Python script to split Draw.io layers
         run: |
           FILE=$(find . -name '*.drawio' | head -n 1)
+          mkdir -p output_layers
           python split.py --input_file "$FILE" --output_dir output_layers
-      
+
       - name: Export drawio → PDF
         uses: rlespinasse/drawio-export-action@v2
         with:
@@ -31,9 +32,11 @@ jobs:
           remove-page-suffix: false
           crop: true
           embed-diagram: true
-      - name: Commit cambios
+
+      - name: Commit PDFs only
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'chore: PDF‑Export synchronisiert'
           commit_user_name: github-actions
           commit_user_email: github-actions@github.com
+          file_pattern: 'export/pdf/**/*.pdf'
