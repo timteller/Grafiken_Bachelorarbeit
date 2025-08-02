@@ -22,6 +22,7 @@ jobs:
           FILE=$(find . -name '*.drawio' | head -n 1)
           mkdir -p output_layers
           python split.py --input_file "$FILE" --output_dir output_layers
+          pwd
 
       - name: Export drawio → PDF
         uses: rlespinasse/drawio-export-action@v2
@@ -33,12 +34,6 @@ jobs:
           crop: true
           embed-diagram: true
       
-      - name: Export all .drawio to PDF
-        run: |
-          mkdir -p export/pdf
-          for file in output_layers/*.drawio; do
-            npx @rlespinasse/drawio-export --crop --embed-diagram --format pdf --output export/pdf "$file"
-          done
 
       - name: Export drawio → PDF
         run: | 
