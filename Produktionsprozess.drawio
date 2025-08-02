@@ -114,16 +114,6 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-65" value="n" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-46">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="530" y="420" as="sourcePoint" />
-            <mxPoint x="420" y="420" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="530" y="390" />
-              <mxPoint x="420" y="390" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="kjXNbdknxgFZG0ey-R28-47" value="Produktionsprozess_with_loops_and_transitions" style="" parent="0" />
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="kjXNbdknxgFZG0ey-R28-47" source="9w9Xh2U-Y_duheg7cGsQ-14" target="9w9Xh2U-Y_duheg7cGsQ-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -220,6 +210,16 @@
         </mxCell>
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-105" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-47" vertex="1">
           <mxGeometry x="430" y="465" width="210" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="kjXNbdknxgFZG0ey-R28-65" value="n" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="420" as="sourcePoint" />
+            <mxPoint x="420" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="390" />
+              <mxPoint x="420" y="390" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="kjXNbdknxgFZG0ey-R28-61" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-47">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
