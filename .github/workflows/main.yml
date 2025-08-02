@@ -48,6 +48,8 @@ jobs:
           
       - name: mv output_layers/export/*.pdf -> export/pdf
         run: | 
+          git rm -r --cached export/pdf || true
+          rm -rf export/pdf
           mkdir -p export/pdf
           sudo mv output_layers/export/*.pdf export/pdf
 
