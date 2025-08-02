@@ -55,7 +55,9 @@ def export_layers(input_file, output_dir):
         if default_cell is not None:
             ET.SubElement(new_mx_root, 'mxCell', attrib=default_cell.attrib)
         
-        
+        # Copy the layer object itself
+        new_layer_cell = ET.SubElement(new_mx_root, 'mxCell', attrib=layer.attrib)
+
         # Find all elements that belong to this layer (those with parent=layer_id)
         layer_elements = mx_graph_model.findall(f'.//*[@parent="{layer_id}"]')
         
