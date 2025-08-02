@@ -24,6 +24,11 @@ jobs:
           python split.py --input_file "$FILE" --output_dir output_layers
           pwd
 
+      - name: ls output_layers
+        run: | 
+          echo "output_layers:"
+          ls output_layers
+
       - name: Export drawio → PDF
         uses: rlespinasse/drawio-export-action@v2
         with:
@@ -35,7 +40,7 @@ jobs:
           embed-diagram: true
       
 
-      - name: Export drawio → PDF
+      - name: ls export
         run: | 
           echo "export/pdf:"
           ls export/pdf
