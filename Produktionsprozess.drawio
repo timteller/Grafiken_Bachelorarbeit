@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.7">
   <diagram name="Seite-1" id="WWTvrGOokQbHTszkcPet">
-    <mxGraphModel dx="504" dy="194" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="864" dy="332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="kjXNbdknxgFZG0ey-R28-45" value="Produktionsprozess" parent="0" />
@@ -90,13 +90,14 @@
           <mxGeometry x="120" y="255" width="70" height="10" as="geometry" />
         </mxCell>
         <mxCell id="kjXNbdknxgFZG0ey-R28-58" value="n" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-46">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxGeometry x="-0.0588" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="410" y="260" as="sourcePoint" />
             <mxPoint x="300" y="260" as="targetPoint" />
             <Array as="points">
               <mxPoint x="410" y="230" />
               <mxPoint x="300" y="230" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="kjXNbdknxgFZG0ey-R28-60" value="n" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-46">
