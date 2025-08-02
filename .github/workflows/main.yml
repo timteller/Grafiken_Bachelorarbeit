@@ -48,6 +48,7 @@ jobs:
           
       - name: mv output_layers/export/*.pdf -> export/pdf
         run: | 
+          mkdir -p export/pdf
           mv output_layers/export/*.pdf export/pdf
 
       - name: ls export/pdf
