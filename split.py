@@ -22,13 +22,14 @@ def export_layers(input_file, output_dir):
         raise ValueError("No mxGraphModel found in the input file.")
     
     # Find all layer objects (objects with style="layer")
-    layers = mx_graph_model.findall('.//object[@style="layer"]')
+    # layers = mx_graph_model.findall('.//object[@style="layer"]')
+    layers = mx_graph_model.findall('.//mxCell[@parent="0"]')
     if not layers:
         raise ValueError("No layers found in the input file.")
     
     for layer in layers:
         layer_id = layer.get('id')
-        layer_label = layer.get('label', 'Unnamed_Layer')
+        layer_label = layer.get('value', 'Unnamed_Layer[Script]')
         
         # Create a new XML tree for the output file
         new_root = ET.Element('mxfile', attrib={
@@ -39,7 +40,7 @@ def export_layers(input_file, output_dir):
         
         # Create a new diagram element
         new_diagram = ET.SubElement(new_root, 'diagram', attrib={
-            'name': layer.get('label'),
+            'name': layer_label,
             'id': root.find('diagram').get('id', 'default_id')
         })
         
@@ -54,9 +55,6 @@ def export_layers(input_file, output_dir):
         if default_cell is not None:
             ET.SubElement(new_mx_root, 'mxCell', attrib=default_cell.attrib)
         
-        # Copy the layer object itself
-        new_layer = ET.SubElement(new_mx_root, 'object', attrib=layer.attrib)
-        new_layer_cell = ET.SubElement(new_layer, 'mxCell', attrib=layer[0].attrib)
         
         # Find all elements that belong to this layer (those with parent=layer_id)
         layer_elements = mx_graph_model.findall(f'.//*[@parent="{layer_id}"]')
