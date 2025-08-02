@@ -32,7 +32,7 @@ jobs:
       - name: Export drawio → PDF
         uses: rlespinasse/drawio-export-action@v2
         with:
-          path: 'output_layers/Produktionsprozess.drawio'
+          path: 'output_layers/*'
           format: pdf
           output: 'export'
           remove-page-suffix: true
@@ -45,6 +45,14 @@ jobs:
         run: | 
           echo "output_layers/export:"
           ls output_layers/export
+          
+      - name: mv output_layers/export/*.pdf -> export/pdf
+        run: | 
+          mv output_layers/export/*.pdf export/pdf
+
+      - name: ls export/pdf
+        run: | 
+          ls export/pdf
       
       - name: Commit PDFs only
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -52,4 +60,4 @@ jobs:
           commit_message: 'chore: PDF‑Export synchronisiert'
           commit_user_name: github-actions
           commit_user_email: github-actions@github.com
-          file_pattern: 'output_layers/export/*'
+          file_pattern: 'export/pdf/*.pdf'
