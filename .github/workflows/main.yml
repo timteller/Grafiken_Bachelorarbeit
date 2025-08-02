@@ -34,16 +34,17 @@ jobs:
         with:
           path: 'output_layers/Produktionsprozess.drawio'
           format: pdf
-          output: 'export/pdf'
-          remove-page-suffix: false
+          output: 'export'
+          remove-page-suffix: true
           crop: true
           embed-diagram: true
+          action-mode: 'all'
       
 
       - name: ls export
         run: | 
-          echo "export/pdf:"
-          ls export/pdf
+          echo "output_layers/export:"
+          ls output_layers/export
       
       - name: Commit PDFs only
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -51,4 +52,4 @@ jobs:
           commit_message: 'chore: PDF‑Export synchronisiert'
           commit_user_name: github-actions
           commit_user_email: github-actions@github.com
-          file_pattern: 'export/pdf/*'
+          file_pattern: 'output_layers/export/*'
