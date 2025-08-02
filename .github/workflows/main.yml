@@ -32,6 +32,13 @@ jobs:
           remove-page-suffix: false
           crop: true
           embed-diagram: true
+      
+      - name: Export all .drawio to PDF
+        run: |
+          mkdir -p export/pdf
+          for file in output_layers/*.drawio; do
+            npx @rlespinasse/drawio-export --crop --embed-diagram --format pdf --output export/pdf "$file"
+          done
 
       - name: Export drawio → PDF
         run: | 
