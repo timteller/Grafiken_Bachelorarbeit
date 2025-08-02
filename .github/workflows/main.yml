@@ -48,6 +48,8 @@ jobs:
           
       - name: mv output_layers/export/*.pdf -> export/pdf
         run: | 
+          git rm -r --cached export/pdf || true
+          rm -rf export/pdf
           mkdir -p export/pdf
           sudo mv output_layers/export/*.pdf export/pdf
 
@@ -61,4 +63,4 @@ jobs:
           commit_message: 'chore: PDF‑Export synchronisiert'
           commit_user_name: github-actions
           commit_user_email: github-actions@github.com
-          file_pattern: 'export/pdf/*.pdf'
+          file_pattern: 'export/pdf'
