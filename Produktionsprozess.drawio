@@ -312,7 +312,7 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-59" value="Speichersystem" style="rounded=1;whiteSpace=wrap;html=1;" parent="kjXNbdknxgFZG0ey-R28-5" vertex="1">
           <mxGeometry x="200" y="640" width="440" height="40" as="geometry" />
         </mxCell>
-        <object label="Produktionsprozess_with_storage_and_transitions" style="layer" id="kjXNbdknxgFZG0ey-R28-6">
+        <object label="Produktionsprozess_with_storage_and_transitions" id="kjXNbdknxgFZG0ey-R28-6">
           <mxCell parent="0" />
         </object>
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="kjXNbdknxgFZG0ey-R28-6" source="9w9Xh2U-Y_duheg7cGsQ-68" target="9w9Xh2U-Y_duheg7cGsQ-81" edge="1">
