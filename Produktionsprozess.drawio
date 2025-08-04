@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.7">
   <diagram name="Seite-1" id="WWTvrGOokQbHTszkcPet">
-    <mxGraphModel dx="1779" dy="684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1351" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="kjXNbdknxgFZG0ey-R28-45" value="Produktionsprozess" parent="0" />
@@ -89,7 +89,7 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-41" value="Rohmaterial" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=-90;" parent="kjXNbdknxgFZG0ey-R28-46" vertex="1">
           <mxGeometry x="120" y="255" width="70" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-60" value="n" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-46">
+        <mxCell id="kjXNbdknxgFZG0ey-R28-60" value="n" style="endArrow=classic;html=1;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-46" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="530" y="260" as="sourcePoint" />
             <mxPoint x="420" y="260" as="targetPoint" />
@@ -99,7 +99,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-71" value="n" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-46">
+        <mxCell id="kjXNbdknxgFZG0ey-R28-71" value="n" style="endArrow=classic;html=1;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-46" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="410" y="260" as="sourcePoint" />
             <mxPoint x="300" y="260" as="targetPoint" />
@@ -206,7 +206,7 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-105" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-47" vertex="1">
           <mxGeometry x="430" y="465" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-65" value="n" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-47">
+        <mxCell id="kjXNbdknxgFZG0ey-R28-65" value="n" style="endArrow=classic;html=1;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-47" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="530" y="420" as="sourcePoint" />
             <mxPoint x="420" y="420" as="targetPoint" />
@@ -216,7 +216,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="kjXNbdknxgFZG0ey-R28-72" value="n" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="kjXNbdknxgFZG0ey-R28-47">
+        <mxCell id="kjXNbdknxgFZG0ey-R28-72" value="n" style="endArrow=classic;html=1;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-47" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="410" y="420" as="sourcePoint" />
             <mxPoint x="300" y="420" as="targetPoint" />
@@ -470,6 +470,10 @@
         </mxCell>
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-101" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-49" vertex="1">
           <mxGeometry x="430" y="890" width="210" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="S2Zjkb8J4VsMm-TutYpo-0" value="Test" parent="0" />
+        <mxCell id="S2Zjkb8J4VsMm-TutYpo-1" value="MANN" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="S2Zjkb8J4VsMm-TutYpo-0">
+          <mxGeometry x="370" y="1010" width="30" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
