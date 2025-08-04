@@ -471,10 +471,6 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-101" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-49" vertex="1">
           <mxGeometry x="430" y="890" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="S2Zjkb8J4VsMm-TutYpo-0" value="Test" parent="0" />
-        <mxCell id="S2Zjkb8J4VsMm-TutYpo-1" value="MANN" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="S2Zjkb8J4VsMm-TutYpo-0">
-          <mxGeometry x="370" y="1010" width="30" height="60" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
