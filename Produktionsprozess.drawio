@@ -843,10 +843,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-130" value="Sicherer Berecih" style="shape=datastore;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-130" value="Sicherer Bereich" style="shape=datastore;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
           <mxGeometry x="530" y="1680" width="90" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-131" value="unsicherer Berecih" style="shape=datastore;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-131" value="Unsicherer Bereich" style="shape=datastore;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
           <mxGeometry x="530" y="1768.5" width="90" height="71.5" as="geometry" />
         </mxCell>
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-132" value="Private(r) Schlüssel" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
