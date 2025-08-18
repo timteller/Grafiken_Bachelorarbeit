@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.1.0">
   <diagram name="Seite-1" id="WWTvrGOokQbHTszkcPet">
-    <mxGraphModel dx="1308" dy="550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="903" dy="380" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="kjXNbdknxgFZG0ey-R28-45" value="Produktionsprozess" parent="0" />
@@ -761,7 +761,7 @@
           <mxGeometry x="350" y="1679" width="90" height="150" as="geometry" />
         </mxCell>
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-93" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#bfbfbf, #ededed);" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
-          <mxGeometry x="160" y="1680" width="100" height="150" as="geometry" />
+          <mxGeometry x="160" y="1679" width="100" height="211" as="geometry" />
         </mxCell>
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-95" value="Ingest-System" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
           <mxGeometry x="170" y="1660" width="80" height="20" as="geometry" />
@@ -801,6 +801,14 @@
             <mxPoint x="29" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-135" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="L-YZDN0S-SYS-3_nK5eK-89" source="L-YZDN0S-SYS-3_nK5eK-108" target="L-YZDN0S-SYS-3_nK5eK-132">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-136" value="Liest" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="L-YZDN0S-SYS-3_nK5eK-135">
+          <mxGeometry x="0.6318" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-108" value="Script" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
           <mxGeometry x="170" y="1800" width="80" height="20" as="geometry" />
         </mxCell>
@@ -821,6 +829,15 @@
               <mxPoint x="270" y="1700" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-130" value="Unsicherer Berecih" style="shape=datastore;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
+          <mxGeometry x="480" y="1679" width="90" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-131" value="Sicherer Berecih" style="shape=datastore;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
+          <mxGeometry x="480" y="1768.5" width="90" height="60.5" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-132" value="Private(r) Schlüssel" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
+          <mxGeometry x="170" y="1850" width="80" height="31" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
