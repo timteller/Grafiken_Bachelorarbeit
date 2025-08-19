@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.1.0">
   <diagram name="Seite-1" id="WWTvrGOokQbHTszkcPet">
-    <mxGraphModel dx="4740" dy="1993" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1806" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="kjXNbdknxgFZG0ey-R28-45" value="Produktionsprozess" parent="0" />
@@ -866,6 +866,88 @@
           <mxGeometry x="0.0446" y="-1" relative="1" as="geometry">
             <mxPoint y="-9" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-157" value="Organigramm" parent="0" />
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-158" value="Direktion Technik und Produktion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#b3b3b3, #ededed);" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="340" y="2030" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-159" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="2120" as="sourcePoint" />
+            <mxPoint x="469.83" y="2090" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="470" y="2120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-160" value="HA Technik" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#a8a1f9, #ededed);" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="340" y="2100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-161" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="2170" as="sourcePoint" />
+            <mxPoint x="449.83" y="2140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="2170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-162" value="IT-Infrastruktur" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="340" y="2200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-163" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="2220" as="sourcePoint" />
+            <mxPoint x="450" y="2170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="2220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-164" value="&lt;div&gt;IT Services,&amp;nbsp;&lt;/div&gt;&lt;div&gt;Solutions and&amp;nbsp;&lt;/div&gt;&lt;div&gt;Innovation&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="340" y="2150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-165" value="&lt;div&gt;IT-Systeme und&amp;nbsp;&lt;/div&gt;&lt;div&gt;Anwendungen&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="340" y="2320" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-166" value="&lt;div&gt;Basis- und&amp;nbsp;&lt;/div&gt;&lt;div&gt;Metadatesysteme&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="340" y="2370" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-167" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="2338" as="sourcePoint" />
+            <mxPoint x="450" y="2220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="2338" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-168" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="2398" as="sourcePoint" />
+            <mxPoint x="450" y="2338" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="2398" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-170" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="L-YZDN0S-SYS-3_nK5eK-157" source="L-YZDN0S-SYS-3_nK5eK-172">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="2280" as="sourcePoint" />
+            <mxPoint x="430" y="2240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="2280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-172" value="Fachteam Storage" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="360" y="2270" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-173" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;div&gt;.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="360" y="2240" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-174" value="&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 50%;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;.&lt;/span&gt;&lt;div&gt;.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-157">
+          <mxGeometry x="360" y="2290" width="60" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
