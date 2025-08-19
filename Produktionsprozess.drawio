@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.1.0">
   <diagram name="Seite-1" id="WWTvrGOokQbHTszkcPet">
-    <mxGraphModel dx="527" dy="221" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1896" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="kjXNbdknxgFZG0ey-R28-45" value="Produktionsprozess" parent="0" />
@@ -967,7 +967,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-5" value="Inhalt ist vollständig durch KI erzeugt" style="rounded=1;whiteSpace=wrap;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" vertex="1">
-          <mxGeometry x="360" y="2560" width="120" height="40" as="geometry" />
+          <mxGeometry x="320" y="2560" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" source="a_W_VonHdIOiLalYOHl4-6" target="a_W_VonHdIOiLalYOHl4-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -986,7 +986,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-6" value="Inhalt Zeigt Person" style="rounded=1;whiteSpace=wrap;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" vertex="1">
-          <mxGeometry x="360" y="2640" width="120" height="40" as="geometry" />
+          <mxGeometry x="320" y="2640" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" source="a_W_VonHdIOiLalYOHl4-28" target="a_W_VonHdIOiLalYOHl4-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -1005,10 +1005,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-28" value="Person existiert in der Realität" style="rounded=1;whiteSpace=wrap;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" vertex="1">
-          <mxGeometry x="360" y="2720" width="120" height="40" as="geometry" />
+          <mxGeometry x="320" y="2720" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-29" value="Deepfake" style="rounded=1;whiteSpace=wrap;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" vertex="1">
-          <mxGeometry x="360" y="2800" width="120" height="40" as="geometry" />
+          <mxGeometry x="320" y="2800" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" source="a_W_VonHdIOiLalYOHl4-30" target="a_W_VonHdIOiLalYOHl4-41" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -1019,23 +1019,23 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-30" value="Inhalt ist Teilweise durch KI erzeugt" style="rounded=1;whiteSpace=wrap;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" vertex="1">
-          <mxGeometry x="560" y="2560" width="120" height="40" as="geometry" />
+          <mxGeometry x="520" y="2560" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-41" value="Klassischer Inhalt" style="rounded=1;whiteSpace=wrap;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" vertex="1">
-          <mxGeometry x="560" y="2480" width="120" height="40" as="geometry" />
+          <mxGeometry x="520" y="2480" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-47" value="Objekt-Deepfake" style="rounded=1;whiteSpace=wrap;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" vertex="1">
-          <mxGeometry x="160" y="2640" width="120" height="40" as="geometry" />
+          <mxGeometry x="120" y="2640" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-59" value="Fiktiver Deepfake" style="rounded=1;whiteSpace=wrap;html=1;" parent="a_W_VonHdIOiLalYOHl4-0" vertex="1">
-          <mxGeometry x="160" y="2720" width="120" height="40" as="geometry" />
+          <mxGeometry x="120" y="2720" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="a_W_VonHdIOiLalYOHl4-65" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="a_W_VonHdIOiLalYOHl4-0" source="a_W_VonHdIOiLalYOHl4-30" target="a_W_VonHdIOiLalYOHl4-6" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="440" y="2650" as="sourcePoint" />
-            <mxPoint x="490" y="2600" as="targetPoint" />
+            <mxPoint x="400" y="2650" as="sourcePoint" />
+            <mxPoint x="450" y="2600" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="620" y="2660" />
+              <mxPoint x="580" y="2660" />
             </Array>
           </mxGeometry>
         </mxCell>
