@@ -21,7 +21,7 @@ jobs:
         run: |
           FILE=$(find . -name '*.drawio' | head -n 1)
           mkdir -p output_layers
-          python split.py --input_file "$FILE" --output_dir output_layers
+          python split_new.py --input_file "$FILE" --output_dir output_layers
           pwd
 
       - name: ls output_layers
