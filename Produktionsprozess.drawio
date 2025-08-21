@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.1.0">
   <diagram name="Seite-1" id="WWTvrGOokQbHTszkcPet">
-    <mxGraphModel dx="1996" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="807" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="kjXNbdknxgFZG0ey-R28-45" value="Produktionsprozess" parent="0" />
@@ -702,10 +702,10 @@
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-29" value="Script" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#4d9900, #ededed);" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="330" y="1400" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-33" value="Ingest&amp;nbsp;&lt;div&gt;Quarantäne-bereich&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#ff33ff, #121212);fillStyle=hatch;gradientColor=none;shadow=0;glass=0;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-33" value="Ingest&amp;nbsp;&lt;div&gt;Quarantäne-bereich&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#ff33ff, #121212);fillStyle=cross-hatch;gradientColor=none;shadow=0;glass=0;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="170" y="1350" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-36" value="&lt;div&gt;Ausgangs-&lt;/div&gt;&lt;div&gt;bereich&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=light-dark(#4d9900, #ededed);fillStyle=hatch;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-36" value="&lt;div&gt;Ausgangs-&lt;/div&gt;&lt;div&gt;bereich&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=light-dark(#4d9900, #ededed);fillStyle=cross-hatch;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="330" y="1350" width="60" height="50" as="geometry" />
         </mxCell>
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.12;entryY=0.993;entryDx=0;entryDy=0;entryPerimeter=0;" parent="L-YZDN0S-SYS-3_nK5eK-0" source="L-YZDN0S-SYS-3_nK5eK-43" target="L-YZDN0S-SYS-3_nK5eK-4" edge="1">
@@ -748,7 +748,7 @@
             <mxPoint x="-1" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-43" value="Sicherer Bereich" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#ff0000, #ededed);fillStyle=hatch;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-43" value="Sicherer Bereich" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#ff0000, #ededed);fillStyle=cross-hatch;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="160" y="1520.27" width="480" height="50" as="geometry" />
         </mxCell>
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-45" value="" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=none;fillColor=light-dark(#FF33FF,#EDEDED);" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
@@ -798,7 +798,7 @@
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-81" value="Script" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#4d9900, #ededed);" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="450" y="1400" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-82" value="&lt;div&gt;Ausgangs-&lt;/div&gt;&lt;div&gt;bereich&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=light-dark(#4d9900, #ededed);fillStyle=hatch;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-82" value="&lt;div&gt;Ausgangs-&lt;/div&gt;&lt;div&gt;bereich&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=light-dark(#4d9900, #ededed);fillStyle=cross-hatch;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="450" y="1350" width="60" height="50" as="geometry" />
         </mxCell>
         <mxCell id="enxX85hwEjjixQm8MO_P-49" value="verschiebt" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="L-YZDN0S-SYS-3_nK5eK-0">
@@ -807,7 +807,7 @@
         <mxCell id="enxX85hwEjjixQm8MO_P-58" value="Script" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#ff0000, #ededed);" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-0">
           <mxGeometry x="160" y="1570.27" width="480" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="enxX85hwEjjixQm8MO_P-59" value="" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=none;fillColor=#000000;fillStyle=hatch;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-0">
+        <mxCell id="enxX85hwEjjixQm8MO_P-59" value="" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=none;fillColor=#000000;fillStyle=cross-hatch;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-0">
           <mxGeometry x="430" y="1640" width="10" height="10" as="geometry" />
         </mxCell>
         <mxCell id="enxX85hwEjjixQm8MO_P-60" value="Durch angrenzendes Script überwachter Bereich" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-0">
