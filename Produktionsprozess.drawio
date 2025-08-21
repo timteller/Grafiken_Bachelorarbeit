@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.1.1">
   <diagram name="Seite-1" id="WWTvrGOokQbHTszkcPet">
-    <mxGraphModel dx="2709" dy="1139" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2231" dy="938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="kjXNbdknxgFZG0ey-R28-45" value="Produktionsprozess" parent="0" />
@@ -891,7 +891,7 @@
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-135" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="L-YZDN0S-SYS-3_nK5eK-89" source="L-YZDN0S-SYS-3_nK5eK-108" target="L-YZDN0S-SYS-3_nK5eK-132" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-136" value="Liest" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="L-YZDN0S-SYS-3_nK5eK-135" vertex="1" connectable="0">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-136" value="liest" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="L-YZDN0S-SYS-3_nK5eK-135" vertex="1" connectable="0">
           <mxGeometry x="0.6318" y="-1" relative="1" as="geometry">
             <mxPoint x="-1" y="8" as="offset" />
           </mxGeometry>
@@ -1227,7 +1227,7 @@
         <mxCell id="0wCWouQMu8IiX0FyKZ1b-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="0wCWouQMu8IiX0FyKZ1b-34" source="0wCWouQMu8IiX0FyKZ1b-48" target="0wCWouQMu8IiX0FyKZ1b-51">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wCWouQMu8IiX0FyKZ1b-45" value="Liest" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0wCWouQMu8IiX0FyKZ1b-44">
+        <mxCell id="0wCWouQMu8IiX0FyKZ1b-45" value="liest" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0wCWouQMu8IiX0FyKZ1b-44">
           <mxGeometry x="0.6318" y="-1" relative="1" as="geometry">
             <mxPoint x="1" y="-11" as="offset" />
           </mxGeometry>
