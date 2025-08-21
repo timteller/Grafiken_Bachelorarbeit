@@ -972,9 +972,6 @@
         <mxCell id="0wCWouQMu8IiX0FyKZ1b-9" value="Seperates Serversystem" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
           <mxGeometry x="610" y="1880" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="0wCWouQMu8IiX0FyKZ1b-10" value="Script" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#ff0000, #ededed);" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
-          <mxGeometry x="610" y="1970" width="80" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="0wCWouQMu8IiX0FyKZ1b-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="L-YZDN0S-SYS-3_nK5eK-89" source="L-YZDN0S-SYS-3_nK5eK-90" target="L-YZDN0S-SYS-3_nK5eK-131">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="520" y="2060" as="sourcePoint" />
