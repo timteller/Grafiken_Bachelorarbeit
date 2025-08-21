@@ -203,7 +203,7 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-104" value="Überprüfen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-47" vertex="1">
           <mxGeometry x="160" y="465" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="9w9Xh2U-Y_duheg7cGsQ-105" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-47" vertex="1">
+        <mxCell id="9w9Xh2U-Y_duheg7cGsQ-105" value="Erstellen&amp;nbsp;eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-47" vertex="1">
           <mxGeometry x="430" y="465" width="210" height="10" as="geometry" />
         </mxCell>
         <mxCell id="kjXNbdknxgFZG0ey-R28-65" value="n" style="endArrow=classic;html=1;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-47" edge="1">
@@ -450,7 +450,7 @@
         <mxCell id="9w9Xh2U-Y_duheg7cGsQ-100" value="Überprüfen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-49" vertex="1">
           <mxGeometry x="160" y="890" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="9w9Xh2U-Y_duheg7cGsQ-101" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-49" vertex="1">
+        <mxCell id="9w9Xh2U-Y_duheg7cGsQ-101" value="Erstellen&amp;nbsp;eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="kjXNbdknxgFZG0ey-R28-49" vertex="1">
           <mxGeometry x="430" y="890" width="210" height="10" as="geometry" />
         </mxCell>
         <mxCell id="P6iB7T7O2YDKpYpo3pcA-0" value="Produktionsprozess_with_transitions" style="" parent="0" />
@@ -547,7 +547,7 @@
         <mxCell id="P6iB7T7O2YDKpYpo3pcA-21" value="Überprüfen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="P6iB7T7O2YDKpYpo3pcA-0" vertex="1">
           <mxGeometry x="160" y="135" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="P6iB7T7O2YDKpYpo3pcA-22" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="P6iB7T7O2YDKpYpo3pcA-0" vertex="1">
+        <mxCell id="P6iB7T7O2YDKpYpo3pcA-22" value="Erstellen&amp;nbsp;eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="P6iB7T7O2YDKpYpo3pcA-0" vertex="1">
           <mxGeometry x="430" y="135" width="210" height="10" as="geometry" />
         </mxCell>
         <mxCell id="MHyfRsvACrbZkxD28zs7-0" value="Containerformat" parent="0" />
@@ -806,7 +806,7 @@
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-25" value="Überprüfen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="160" y="1760" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-26" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-26" value="Erstellen&amp;nbsp;eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="430" y="1760" width="210" height="10" as="geometry" />
         </mxCell>
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-43" value="Sicherer Bereich" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;fillStyle=auto;strokeColor=light-dark(#000000,#EDEDED);shadow=0;glass=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;gradientColor=none;dashed=1;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
@@ -999,7 +999,7 @@
         <mxCell id="0wCWouQMu8IiX0FyKZ1b-28" value="Überprüfen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
           <mxGeometry x="170" y="2280" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="0wCWouQMu8IiX0FyKZ1b-29" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
+        <mxCell id="0wCWouQMu8IiX0FyKZ1b-29" value="Erstellen&amp;nbsp;eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
           <mxGeometry x="440" y="2280" width="210" height="10" as="geometry" />
         </mxCell>
         <mxCell id="0wCWouQMu8IiX0FyKZ1b-30" value="" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=none;fillColor=light-dark(#FF33FF,#EDEDED);" vertex="1" parent="L-YZDN0S-SYS-3_nK5eK-89">
@@ -1280,7 +1280,7 @@
         <mxCell id="0wCWouQMu8IiX0FyKZ1b-65" value="Überprüfen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="0wCWouQMu8IiX0FyKZ1b-34">
           <mxGeometry x="150" y="2830" width="210" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="0wCWouQMu8IiX0FyKZ1b-66" value="Hinzufügen eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="0wCWouQMu8IiX0FyKZ1b-34">
+        <mxCell id="0wCWouQMu8IiX0FyKZ1b-66" value="Erstellen&amp;nbsp;eines Sicherheitsmerkmals" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="0wCWouQMu8IiX0FyKZ1b-34">
           <mxGeometry x="420" y="2830" width="210" height="10" as="geometry" />
         </mxCell>
         <mxCell id="0wCWouQMu8IiX0FyKZ1b-67" value="" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=none;fillColor=light-dark(#FF33FF,#EDEDED);" vertex="1" parent="0wCWouQMu8IiX0FyKZ1b-34">
