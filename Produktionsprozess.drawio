@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.1.0">
   <diagram name="Seite-1" id="WWTvrGOokQbHTszkcPet">
-    <mxGraphModel dx="972" dy="409" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="566" dy="238" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="kjXNbdknxgFZG0ey-R28-45" value="Produktionsprozess" parent="0" />
@@ -702,7 +702,7 @@
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-29" value="Script" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#4d9900, #ededed);strokeColor=light-dark(#000000,#EDEDED);" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="330" y="1400" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="L-YZDN0S-SYS-3_nK5eK-33" value="Ingest&amp;nbsp;&lt;div&gt;Quarantäne-bereich&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;fillStyle=auto;gradientColor=none;shadow=0;glass=0;strokeColor=light-dark(#000000,#EDEDED);align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;dashed=1;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
+        <mxCell id="L-YZDN0S-SYS-3_nK5eK-33" value="&lt;div&gt;Ausgangs&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;bereich&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;fillStyle=auto;gradientColor=none;shadow=0;glass=0;strokeColor=light-dark(#000000,#EDEDED);align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;dashed=1;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
           <mxGeometry x="170" y="1350" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="L-YZDN0S-SYS-3_nK5eK-36" value="&lt;div&gt;Ausgangs-&lt;/div&gt;&lt;div&gt;bereich&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000,#EDEDED);align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;fillStyle=auto;gradientColor=none;shadow=0;glass=0;dashed=1;" parent="L-YZDN0S-SYS-3_nK5eK-0" vertex="1">
